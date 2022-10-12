@@ -1,7 +1,7 @@
 ## Description
 **project in development*
 
-[![screenshot](https://imageup.ru/img191/4043025/spa-table.png.html)](https://imageup.ru/img191/4043025/spa-table.png.html)
+![screenshot](https://imageup.ru/img191/4043025/spa-table.png)
 
 I've started to learn Vue.js framework. This is my first project with simple functional. The table has sorting (A -> Z / Z -> A) at all columns, except date column.
 
