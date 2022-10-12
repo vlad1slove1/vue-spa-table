@@ -1,30 +1,34 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
-  <router-view/>
+  <div id="app">
+    <AppTable :table_data="ITEMS" />
+  </div>
 </template>
 
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+<script>
+import { mapActions, mapGetters } from 'vuex';
+import AppTable from '@/components/app-table.vue';
 
-nav {
-  padding: 30px;
+export default {
+  name: 'app',
 
-  a {
-    font-weight: bold;
-    color: #2c3e50;
+  components: {
+    AppTable,
+  },
 
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
-}
-</style>
+  computed: {
+    ...mapGetters([
+      'ITEMS',
+    ]),
+  },
+
+  methods: {
+    ...mapActions([
+      'GET_ITEMS_FROM_DB',
+    ]),
+  },
+
+  mounted() {
+    this.GET_ITEMS_FROM_DB();
+  },
+};
+</script>
