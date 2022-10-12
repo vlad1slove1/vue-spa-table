@@ -7,8 +7,11 @@ I've started to learn Vue.js framework. This is my first project with simple fun
 
 There are a few goals, i'm trying to reach:
 1. add filtering by three cases at once: 
+
     a) input with keyword (with submit event);
+    
     b) column selector;
+    
     c) option selector (equal, includes, more than, less than)
 
 2. refactor the vue components to prettify whole structure
